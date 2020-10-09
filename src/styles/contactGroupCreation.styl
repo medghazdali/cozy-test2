@@ -1,0 +1,57 @@
+@require 'cozy-ui'
+@require 'settings/palette.styl'
+
+.container
+    height rem(48)
+    display flex
+    align-items center
+    color charcoalGrey
+
+.contact-group-creation-divider
+    width 100%
+    border-top 1px solid silver
+
+.overlay-creation-group
+    opacity 0
+
+/*since we keep the existing style of
+react-select for the menu and we only
+want to override width & zindex... important
+is important. Right positionning is just set,
+it overrides nothing so there's no need for
+!important */
+.react-select__menu
+    width rem(384) !important
+    z-index 100000 !important
+    right 0
+
+    +small-screen()
+            top auto !important
+            width 100% !important
+
+.react-select__custom__container
+    +small-screen()
+        position inherit !important
+
+.react-select__container
+    display inline-block
+    vertical-align middle
+
+
+.react-select__menu-notice--no-options
+    color coolGrey
+    margin-left .5rem !important
+    height rem(48)
+    display flex
+    align-items center
+
+
+.contact-group-create-div-icon
+    display flex
+    align-items center
+    flex 1
+
+.react-select__menu-list
+    text-align initial
+    +small-screen()
+        max-width inherit !important

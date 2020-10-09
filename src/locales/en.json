@@ -1,0 +1,138 @@
+{
+  "associated_accounts": "Account linked to this contact |||| Accounts linked to this contact",
+  "menu": "Menu",
+  "create_contact": "Create a contact",
+  "cancel": "Cancel",
+  "confirm": "Confirm",
+  "edit": "Edit",
+  "edit-contact": "Edit contact",
+  "save": "Save",
+  "delete": "Delete",
+  "selected_contacts": "%{smart_count} selected contact |||| %{smart_count} selected contacts",
+  "select-all": "Select all",
+  "unselect-all": "Unselect all",
+  "contact_info": "Contact informations",
+  "contact_group": "Groups",
+  "me": "me",
+  "empty-list": "EMPTY",
+  "empty": {
+    "title": "Import your contacts",
+    "description": "Click the \"Create a contact\" button to start using the app.",
+    "import_store": "Import from an other sources",
+    "import_vcard": "Import from a vCard file",
+    "after": "Importing your contacts might take a few minutes, time to enjoy a well deserved coffee break ☕️"
+  },
+  "import": {
+    "title": "Import contacts",
+    "store": "From other sources",
+    "vcard": "From a vCard file"
+  },
+  "error": {
+    "save": "An error occurred while saving the contact, please try again",
+    "group_selected": "There was a problem when selecting a group, please try again."
+  },
+  "formatted": {
+    "date": "YYYY-MM-DD",
+    "address": "%{pobox} %{street} %{postcode} %{city} %{region} %{country}"
+  },
+  "fields": {
+    "givenName": "Firstname",
+    "familyName": "Lastname",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "cozy": "Cozy URL",
+    "company": "Company",
+    "jobTitle": "Job title",
+    "birthday": "Birthday",
+    "note": "Notes",
+    "label": "Label"
+  },
+  "importation": {
+    "cancel": "Cancel",
+    "complete_failure": "Import failed.",
+    "complete_success": "Congratulations!",
+    "creation": "a contact has been created |||| %{smart_count} contacts have been created",
+    "update": "a contact has been updated |||| %{smart_count} contacts have been updated",
+    "empty_file": "This file is empty.",
+    "export_steps_intro": "To get your contacts from another program, you must first export the whole list:",
+    "export_to_vcard_step": "Export your contacts in a file with vCard (*.vcf) format",
+    "invalid_file_type": "This file type is unsupported.",
+    "no_file": "Select your file here",
+    "open_contact_manager_step": "Open your favorite contacts manager",
+    "partial_success": "%{smart_count} of %{total} contact was imported. |||| %{smart_count} of %{total} contacts were imported.",
+    "ready": "Ready to import",
+    "retry": "Retry",
+    "retry_hint": "Please try again to complete your import.",
+    "retry_or_select_another_hint": "Try again or choose another file.",
+    "run": "Import",
+    "running": "Transfering file…",
+    "title": "Import contacts",
+    "transfer_file": "Transfer a file",
+    "available_soon": "You will soon be able to import your contacts from other services (iCloud, Facebook...)."
+  },
+  "addLabel": {
+    "address": "Add an address",
+    "email": "Add an email",
+    "phone": "Add a phone"
+  },
+  "SelectionBar": {
+    "close": "Close",
+    "selected_count": "contact selected |||| contacts selected",
+    "trash": "delete"
+  },
+  "groups": {
+    "none": "There is no existing group.",
+    "manage": "Manage groups",
+    "create": "Create a group",
+    "created": {
+      "success": "The group has been created correctly.",
+      "error": "The group has not been created."
+    },
+    "name": "Name of the group",
+    "removed": "The group %{name} has been removed.",
+    "remove_canceled": "The group %{name} has been restored. Contacts are still linked.",
+    "already_exists": "The group %{name} already exists.",
+    "renamed": {
+      "success": "The group has been renamed correctly.",
+      "error": "The group has not been renamed."
+    }
+  },
+  "filter": {
+    "no-group": "Create contact groups to facilitate filing and sharing!",
+    "all-contacts": "All contacts"
+  },
+  "delete-confirmation": {
+    "title": "Delete this contact? |||| Delete these contacts?",
+    "description-simple": "This contact will be removed permanently from your Cozy. |||| These contacts will be removed permanently from your Cozy.",
+    "description-google": "This contact will also be deleted from your Google address book. |||| These contacts will also be deleted from your Google address book.",
+    "description-mixed": "These contacts will be removed permanently from your Cozy, the contacts linked to your Google account will also be deleted from your Google address book."
+  },
+  "intent": {
+    "creation_error": "An error occured while trying to contact the other app. Please try again later?"
+  },
+  "manifest": {
+    "short_description": "Cozy Contacts helps you to save, secure and manage all your contacts from your Cozy.",
+    "long_description": "With Cozy Contacts you can:\n\n* Add, edit and sort your contacts,\n* Manage your groups of contacts,\n* Make your sharing easier from Cozy Drive with your contacts,\n* Synchronise your contacts from Google,\n* And soon, synchronise your contacts from your mobile and other online services (iCloud, Facebook...)",
+    "permissions": {
+      "apps": {
+        "description": "Required by the main menu to display the icons of the apps"
+      },
+      "contacts": {
+        "description": "Required to manage your contacts"
+      },
+      "contactsgroups": {
+        "description": "Required to manage groups of contacts"
+      },
+      "contactsAccounts": {
+        "description": "Required to link your contacts with your remote accounts"
+      },
+      "triggers": {
+        "description": "Used to sort contacts"
+      }
+    }
+  },
+  "loading": {
+    "fetching_contacts": "Loading of your contacts, please wait."
+  }
+}

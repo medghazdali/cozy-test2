@@ -1,0 +1,83 @@
+{
+  "name": "Contacts",
+  "editor": "Cozy",
+  "name_prefix": "Cozy",
+  "slug": "contacts",
+  "icon": "icon.svg",
+  "type": "webapp",
+  "description": "Contact manager for Cozy Cloud",
+  "category": "cozy",
+  "version": "0.9.2",
+  "licence": "AGPL-3.0",
+  "source": "https://github.com/cozy/cozy-contacts.git@build",
+  "developer": {
+    "name": "Cozy Cloud",
+    "url": "https://cozy.io"
+  },
+  "default_locale": "en",
+  "screenshots": [
+    "screenshots/fr/screenshot01.png",
+    "screenshots/fr/screenshot02.png",
+    "screenshots/fr/screenshot03.png"
+  ],
+  "routes": {
+    "/": {
+      "folder": "/",
+      "index": "index.html",
+      "public": false
+    },
+    "/services": {
+      "folder": "/intents",
+      "index": "index.html",
+      "public": false
+    }
+  },
+  "permissions": {
+    "apps": {
+      "type": "io.cozy.apps",
+      "verbs": ["GET"]
+    },
+    "contacts": {
+      "type": "io.cozy.contacts",
+      "verbs": ["ALL"]
+    },
+    "contactsgroups": {
+      "type": "io.cozy.contacts.groups",
+      "verbs": ["ALL"]
+    },
+    "contactsAccounts": {
+      "type": "io.cozy.contacts.accounts",
+      "verbs": ["ALL"]
+    },
+    "settings": {
+      "description": "Required by the cozy-bar to display Claudy and know which applications are coming soon",
+      "type": "io.cozy.settings",
+      "verbs": ["GET"]
+    },
+    "triggers": {
+      "description": "Used to sort contacts",
+      "type": "io.cozy.triggers",
+      "verbs": ["GET", "POST"]
+    }
+  },
+  "intents": [
+    {
+      "action": "PICK",
+      "type": ["io.cozy.contacts"],
+      "href": "/services"
+    },
+    {
+      "action": "CREATE",
+      "type": ["io.cozy.contacts"],
+      "href": "/services"
+    }
+  ],
+  "services": {
+    "keepIndexFullNameAndDisplayNameUpToDate": {
+      "type": "node",
+      "file": "services/keepIndexFullNameAndDisplayNameUpToDate/contacts.js",
+      "trigger": "@event io.cozy.contacts:CREATED,UPDATED",
+      "debounce": "5s"
+    }
+  }
+}
