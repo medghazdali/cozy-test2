@@ -11,8 +11,38 @@ import ContactRow from './ContactRow'
 import ContactHeaderRow from './ContactHeaderRow'
 
 import withSelection from '../Selection/selectionContainer'
+import { scroller } from 'react-scroll'
 
 class ContactsList extends Component {
+
+  constructor(props) {
+    super(props);
+    this.getPressKey = this.getPressKey.bind(this);
+
+  }
+
+
+  getPressKey(event) {
+
+    // scroll.scrollToTop();
+    scroller.scrollTo(event.key, {
+      duration: 2500,
+      delay: 1,
+      smooth: true,
+      // containerId: event.key,
+      offset: 1, // Scrolls to element + 50 pixels down the page
+    })
+
+  }
+
+
+  componentDidMount() {
+    document.addEventListener("keydown", this.getPressKey, false);
+  }
+  componentWillUnmount() {
+    document.removeEventListener("keydown", this.getPressKey, false);
+  }
+
   render() {
     const { clearSelection, contacts, selection, selectAll, t } = this.props
 
@@ -41,7 +71,7 @@ class ContactsList extends Component {
             {Object.entries(categorizedContacts).map(([header, contacts]) => (
               <li key={`cat-${header}`}>
                 <ContactHeaderRow key={header} header={header} />
-                <ol className="sublist-contact">
+                <ol id={header}  name={header} className="sublist-contact">
                   {contacts.map(contact => (
                     <li key={`contact-${contact._id}`}>
                       <ContactRow
