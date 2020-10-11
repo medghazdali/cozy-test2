@@ -51,7 +51,7 @@ export const ContentResult = ({ contacts, allGroups }) => {
           right={<Toolbar />}
         />
       )}
-      <Content>
+      <Content id="scrollableElement">
         <ContactsList contacts={filteredContactsByGroup} />
       </Content>
     </>

@@ -5,6 +5,7 @@ main > [role=main]
     width 100%
     max-width 80rem
     margin 0 auto
+    scroll-behavior: smooth
 
 .list-wrapper
     box-shadow 0 4px 4px 0 silver
@@ -92,6 +93,26 @@ $reset-list
 
 .divider
     @extend $table-divider
+    display: flex
+    align-items: center
+    justify-content: space-around
+    text-indent: 0
+
+$alphabet
+    cursor:pointer
+    width: 25px
+    height: 25px
+    align-items: center
+    justify-content: center
+    display: flex
+    border-radius: 50%
+
+.alphabet
+    @extend $alphabet
+
+.alphabet_active
+    @extend $alphabet
+    border: 2px solid #297ef2
 
 // TODO: Find a better way to set the .empty icon size
 .contacts-empty>svg
